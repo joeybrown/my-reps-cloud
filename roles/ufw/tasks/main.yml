@@ -1,0 +1,12 @@
+---
+- name: Set firewall default policy
+  ufw: state=enabled policy=reject
+
+- name: Allow ssh from private network
+  ufw: rule=allow port=22 src={{build_server_internal_ip}}
+
+- name: Allow http
+  ufw: rule=allow port=80
+
+- name: Allow https
+  ufw: rule=allow port=443
