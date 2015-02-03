@@ -1,0 +1,16 @@
+---
+
+- hosts: appservers
+  name: Gether facts from webservers
+  user: root
+  tasks:
+    - fail: msg=""
+      when: false
+
+- name: Setup Webservers
+  hosts: webservers
+  user: root
+
+  roles:
+    - ufw
+    - nginx

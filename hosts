@@ -1,2 +1,5 @@
 [webservers]
-mr-web-01
+mr_web_01
+
+[appservers]
+mr_app_00

@@ -1,8 +1,0 @@
----
-- name: Setup Webservers
-  hosts: webservers
-  user: root
-
-  roles:
-    - ufw
-    - nginx
