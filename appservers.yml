@@ -1,16 +1,16 @@
 ---
 
-- hosts: appservers
+- hosts: webservers
   name: Gether facts from webservers
   user: root
   tasks:
     - fail: msg=""
       when: false
 
-- name: Setup Webservers
-  hosts: webservers
+- name: Setup Appservers
+  hosts: appservers
   user: root
 
   roles:
-    - ufw_web
+    - ufw_app
     - nginx
