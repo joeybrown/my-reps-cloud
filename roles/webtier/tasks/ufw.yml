@@ -1,0 +1,7 @@
+---
+
+- name: Allow http and https
+  ufw: rule=allow port={{item}}
+  with_items:
+    - 80
+    - 443

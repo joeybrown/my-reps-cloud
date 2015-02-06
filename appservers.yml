@@ -12,5 +12,5 @@
   user: root
 
   roles:
-    - ufw_app
-    - nginx
+    - common
+    - apptier

@@ -1,13 +1,7 @@
 ---
-- name: Set firewall default policy
-  ufw: state=enabled policy=reject
-
-- name: Allow ssh from private network
-  ufw: rule=allow port=22 src={{build_server_internal_ip}}
 
 - name: Allow http from webservers
   ufw: rule=allow port={{item[1]}} src={{hostvars[item[0]]['ansible_eth1']['ipv4']['address']}}
   with_nested:
     - groups['webservers']
     - [80, 8000] #delete 80 when not depending on web_00
-  
