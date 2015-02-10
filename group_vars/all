@@ -1,3 +1,4 @@
 ---
 server_hostname: www.myrepresentatives.com
 build_server_internal_ip: 10.132.111.220/255.255.0.0
+vpn_server_internal_ip: 10.132.103.54/255.255.0.0

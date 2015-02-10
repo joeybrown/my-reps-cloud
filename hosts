@@ -3,3 +3,7 @@ mr_web_01
 
 [appservers]
 mr_app_00
+
+[devservers]
+mr_dev_00
+mr_demo_00

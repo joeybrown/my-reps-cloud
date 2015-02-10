@@ -1,0 +1,9 @@
+---
+
+- name: Setup Devservers
+  hosts: devservers
+  user: root
+
+  roles:
+    - common
+    - devboxes

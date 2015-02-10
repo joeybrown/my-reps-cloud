@@ -1,0 +1,8 @@
+---
+
+- name: Allow http and https only from vpn
+  ufw: rule=allow port={{item}} from={{vpn_server_internal_ip}}
+  with_items:
+    - 80
+    - 443
+
